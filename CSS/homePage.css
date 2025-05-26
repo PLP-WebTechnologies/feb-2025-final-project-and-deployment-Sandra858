@@ -1,0 +1,634 @@
+/* ========================BODY STYLES=========================================== */
+
+    /* Light Mode Body */
+        body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f5f7fa;  /* Soft white background */
+        color: #333;                /* Dark text */
+        transition: all 0.3s ease;
+        }
+
+    /* Dark Mode Body */
+        body.dark-mode {
+        background-color: #222222;  /* Rich dark charcoal */
+        color: wheat;               /* Warm soft tan text */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+/* ======================NAV BAR STYLES========================================= */
+    /* ===============Toggle buttton======================== */
+        /* Light mode */
+        #modeToggle {
+            font-size: 1.5rem;
+            background-color: transparent;
+            border: none;
+            color: inherit;
+            cursor: pointer;
+            padding: 0.3rem 0.5rem;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            border-radius: 10px;
+        }
+
+        /* Light mode hover */
+        body:not(.dark-mode) #modeToggle:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+    
+
+        /* Dark mode hover */
+        body.dark-mode #modeToggle:hover {
+            background-color: #2c2c2c;
+            box-shadow: 0 0 8px rgba(167, 103, 103, 1); 
+            transform: scale(1.1);
+        }
+         /* Toggle container */
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            padding: 0 1.5rem 1rem 1.5rem;
+        }
+
+
+
+    /* =============== Collapsse sidebar======================== */
+        /* Loght mode */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 60px;
+            overflow: hidden;
+            background-color: #1e88e5;
+            color: white;
+            padding: 1rem 0;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: width 0.3s ease, background-color 0.3s ease;
+        }
+       
+        /* expand on hover */
+        .sidebar:hover {
+            width: 200px; /* full width */
+            box-shadow: 4px 0 12px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Hide labels initially */
+        .sidebar .label{
+            opacity: 0;
+            white-space: nowrap;
+            transition: opacity 0.3s ease;
+            overflow: hidden;
+        }
+        /* show labels on hover */
+        .sidebar:hover .label {
+            opacity: 1;
+         
+        }
+
+        /* Dark mode */
+        body.dark-mode .sidebar {
+            background-color: #333;
+            color: wheat;
+        }
+
+        /* side bar list */
+        .sidebar ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+
+        }
+
+        .sidebar ul li {
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            user-select: none; /* Prevent text selection when clicked */
+            transition: background-color 0.3s ease; 
+            align-items: center;
+            display: flex;
+            gap: 12px;
+            padding: 1rem;
+            z-index: 0;
+        }
+        .sidebar ul li i {
+            min-width: 24px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        /* Light mode hover and focus */
+        body:not(.dark-mode) .sidebar ul li:hover,
+        body:not(.dark-mode) .sidebar ul li:focus {
+            background-color: #2c2c2c;
+            color: beige;
+            padding: 10px;
+            border-radius: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+        }
+
+        /* Dark mode hover and focus */
+        body.dark-mode .sidebar ul li:hover,
+        body.dark-mode .sidebar ul li:focus {
+            background-color: #a76767;
+            color: beige;
+            padding: 10px;
+            border-radius: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+        }
+        .sidebar-link {
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            width: 100%;
+        }
+            .sidebar-link:hover {
+            /* same hover effect as li:hover */
+            background-color: #2c2c2c; /* or your hover color */
+            color: beige;
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+         }
+
+
+
+
+
+
+/* ==============HEADER SECTION STYLES================ */
+    /* Light mode */
+    .hero {
+        position: relative;
+        height: 30vh;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+    .bg-video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    .overlay{
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .overlay h1{
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #dynamicText {
+        font-size: 1.5rem;
+        animation: textPulse 3s infinite;
+        
+    }
+
+    /* Profile icon */
+    .profile-icon{
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid white;
+        transition: transform 0.3s ease;
+    }
+
+    .profile-icon:hover {
+        transform: scale(1.1);
+    }
+    /* Text animation */
+    @keyframes textPulse {
+    0% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.4;
+    }
+    }
+
+    /* Dark Mode Adjustments */
+    body.dark-mode .overlay h1,
+    body.dark-mode #dynamicText {
+        color: rgb(250, 200, 106);
+        font-weight: bold;
+    }
+
+    body.dark-mode .profile-icon {
+        border-color: wheat;
+        
+    }
+
+
+
+
+       
+/* ======================== MAIN CONTENT STYLES ======================= */
+
+    /* Container holding left content and sidebar */
+    .content {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    align-items: flex-start;
+    margin-left:50px;
+
+    }
+
+    /* Left content column: search bar + new arrivals */
+    .left-content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    }
+
+    /* Search bar container */
+    .search-bar {
+    width: 90%;
+    }
+
+    /* Search input styling */
+    .search-bar input {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Focus effect on search input */
+    .search-bar input:focus {
+    border-color: #1e88e5;
+    box-shadow: 0 0 5px rgba(30, 136, 229, 0.5);
+    }
+
+    /* New Arrivals section */
+    .new-arrivals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    }
+
+    /* New Arrivals heading */
+    .new-arrivals h2 {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #1e88e5;
+    }
+
+    /* Each product card */
+    .new-arrivals .product {
+    flex: 1 1 calc(23% - 1rem); /* ~4 cards per row */
+    background: #f5f7fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+    padding: 0.8rem;
+    }
+
+    /* Hover effect for product cards */
+    .new-arrivals .product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(30, 136, 229, 0.4);
+    }
+
+    /* Product image */
+    .new-arrivals .product img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    }
+
+    /* Product text */
+    .new-arrivals .product p {
+    margin: 0.3rem 0;
+    color: #333;
+    font-weight: 500;
+    }
+
+    /* Sidebar on the right */
+    .notes-sidebar {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    height: fit-content;
+    border-left: 2px solid #ccc;
+    box-sizing: border-box;
+    }
+
+    /* Add Notes section inside sidebar */
+    .add-notes h3,
+    .wish-list h3 {
+    margin-bottom: 0.5rem;
+    }
+
+    /* Textarea styling */
+    .add-notes textarea {
+    width: 90%;
+    min-height: 100px;
+    padding: 0.5rem;
+    resize: vertical;
+    border-radius: 9px;
+    border: 1.5px solid #ccc;
+    outline: none;
+    font-size: 1rem;
+    }
+
+    /* Textarea focus */
+    .add-notes textarea:focus {
+    border-color: #1e88e5;
+    box-shadow: 0 0 5px rgba(30, 136, 229, 0.5);
+    }
+
+    /* Wishlist styling */
+    .wish-list ul {
+    list-style: none;
+    padding-left: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    }
+
+    /* Wishlist items */
+    .wish-list li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #ccc;
+    color: #555;
+    }
+
+    /* Scrollbar styling for wishlist */
+    .wish-list ul::-webkit-scrollbar {
+    width: 6px;
+    }
+    .wish-list ul::-webkit-scrollbar-thumb {
+    background-color: #1e88e5;
+    border-radius: 3px;
+    }
+
+    /* add to cart button */
+    .new-arrivals .product .add-to-cart-btn {
+        background-color: #1e88e5;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 0.5rem 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 0.5rem;
+        width: 100%;
+    }
+
+        .new-arrivals .product .add-to-cart-btn:hover {
+        background-color: #155fa0;
+    }
+
+
+   
+
+
+    /*================== Dark Mode Adjustments======================== */
+    /* === Dark Mode Styles === */
+        body.dark-mode {
+        background-color: #222222;
+        color: wheat;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Container */
+        body.dark-mode .content {
+        background-color: #222222;
+        }
+
+        /* Search bar container */
+        body.dark-mode .search-bar {
+        width: 90%;
+        }
+
+        /* Search input */
+        body.dark-mode .search-bar input {
+        background-color: #333333;
+        color: wheat;
+        border: 1.5px solid #555;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        body.dark-mode .search-bar input::placeholder {
+        color: #aaa;
+        }
+
+        body.dark-mode .search-bar input:focus {
+        border-color: #A76767;
+        box-shadow: 0 0 8px rgba(167, 103, 103, 1);
+        }
+
+        /* New arrivals heading */
+        body.dark-mode .new-arrivals h2 {
+        color: #a76767;
+        }
+
+        /* Products container */
+        body.dark-mode .new-arrivals .product {
+        background: #333333;
+        color: wheat;
+        border-radius: 8px;
+        box-shadow: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 0.8rem;
+        }
+
+        body.dark-mode .new-arrivals .product:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 8px rgba(167, 103, 103, 1);
+        }
+
+        /* Product text */
+        body.dark-mode .new-arrivals .product p {
+        color: wheat;
+        }
+
+        /* Product images remain unchanged but can add border if you want */
+        body.dark-mode .new-arrivals .product img {
+        border-radius: 6px;
+        object-fit: cover;
+        height: 150px;
+        max-width: 100%;
+        filter: brightness(0.9);
+        }
+
+        /* Sidebar */
+        body.dark-mode .notes-sidebar {
+        background-color: #333333;
+        border-left: 2px solid #555555;
+        color: wheat;
+        padding: 1rem;
+        border-radius: 8px;
+        height: fit-content;
+        box-sizing: border-box;
+        }
+
+        /* Add notes heading */
+        body.dark-mode .add-notes h3,
+        body.dark-mode .wish-list h3 {
+        color: wheat;
+        }
+
+        /* Textarea */
+        body.dark-mode .add-notes textarea {
+        background-color: #444444;
+        color: wheat;
+        border: 1.5px solid #555555;
+        resize: vertical;
+        border-radius: 6px;
+        padding: 0.5rem;
+        font-size: 1rem;
+        }
+
+        body.dark-mode .add-notes textarea:focus {
+        border-color: #a76767;
+        box-shadow: 0 0 8px rgba(167, 103, 103, 1);
+        outline: none;
+        }
+
+        /* Wishlist items */
+        body.dark-mode .wish-list ul {
+        max-height: 200px;
+        overflow-y: auto;
+        list-style: none;
+        padding-left: 0;
+        color: wheat;
+        }
+
+        body.dark-mode .wish-list li {
+        border-bottom: 1px solid #555;
+        padding: 0.4rem 0;
+        color: wheat;
+        }
+
+        /* Scrollbar for wishlist */
+        body.dark-mode .wish-list ul::-webkit-scrollbar {
+        width: 6px;
+        }
+
+        body.dark-mode .wish-list ul::-webkit-scrollbar-thumb {
+        background-color: #a76767;
+        border-radius: 3px;
+        }
+
+        /* Dark mode Add to Cart button */
+        .dark-mode .new-arrivals .product .add-to-cart-btn {
+            background-color: #A76767; /* muted red */
+            color: wheat;
+        }
+
+            /* Dark mode hover */
+         .dark-mode .new-arrivals .product .add-to-cart-btn:hover {
+              background-color: #854e4e; /* darker shade of #A76767 */
+        }
+
+/* ======================================FOOTER=========================== */
+    /* Footer styles */
+    footer {
+        background-color: #1e88e5;
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
+        padding: 1rem 2rem;
+        font-size: 0.9rem;
+        border-top: 1px solid #ccc;
+        margin-top: 2rem;
+
+    }
+
+    footer .social-icons {
+        margin-top: 0.5rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+       
+    }
+
+    footer .social-icons a {
+        color: white;
+        font-size: 30px;
+        transition: color 0.3s ease;
+        text-decoration: none;
+    }
+
+    footer .social-icons a:hover {
+        color: #a610dc;  /* Dark mode icon color */
+    }
+    
+    /* Dark mode */
+    .dark-mode footer {
+        background-color: #222222;  /* Dark background */
+        color: wheat;
+        border-top: 1px solid #444;
+    }
+
+    .dark-mode footer .social-icons a {
+        color: #A76767;  /* Dark mode icon color */
+    }
+
+    .dark-mode footer .social-icons a:hover {
+        color: #d51717;
+    }
+
+
+/* Responsive tweak (optional) */
+    @media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+    }
+    .left-content,
+    .notes-sidebar {
+        flex: unset;
+        width: 100%;
+    }
+    .new-arrivals .product {
+        flex: 1 1 calc(48% - 1rem); /* 2 per row on smaller screens */
+    }
+    }

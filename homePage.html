@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage</title>
+  <link rel="stylesheet" href="CSS/homePage.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <ul>
+      
+      <li>
+        <a href="">
+          <i class="fas fa-home icon"></i> <span class="label">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="account.html">
+          <i class="fas fa-user icon"></i> <span class="label">Account</span>
+        </a>
+      </li>
+      <li>
+        <a href="userDashboard.html">
+          <i class="fas fa-box icon"></i> <span class="label">User Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="cart.html">
+          <i class="fas fa-shopping-cart icon"></i><span class="label"> Your Cart</span>
+        </a>
+      </li>
+      <li>
+        <a href="support.html">
+          <i class="fas fa-tools icon"></i><span class="label">Support</span>
+        </a>
+      </li>
+      <li>
+        <a href="signUp-In-Page.html">
+          <i class="fas fa-sign-out-alt icon"></i><span class="label">Log Out</span>
+        </a>
+      </li>
+    </ul>
+  
+    <div class="toggle-container">
+      <button id="modeToggle">🌙</button>
+    </div>
+    
+
+  </aside>
+
+  <!-- Main content -->
+  <div class="main">
+
+    <!-- Header with video and animated text -->
+    <header class="hero">
+      <video autoplay muted loop class="bg-video">
+        <source src="Assets/Videos/banner-homepage.mp4" type="video/mp4" />
+      </video>
+      <img src="Assets/Icons/profile-icon.jpg" alt="User" class="profile-icon" />
+      <div class="overlay">
+        <h1>Welcome Back!</h1>
+        <p id="dynamicText">Shop with us! shop safe! Shop affordable!</p>
+      </div>
+      
+    </header>
+    <section class="content">
+
+  <div class="left-content">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search products..." />
+    </div>
+    <div class="new-arrivals">
+      <h2>New Arrivals</h2>
+      <div class="product">
+        <img src="Assets/bags/item1.jpg" />
+        <p>Product Name</p>
+        <p>$138.90</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Assets/Electronics/Item1.jpg" />
+        <p>Product Name</p>
+        <p>$138.90</p>
+         <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Assets/Electronics/Item2.jpg" />
+        <p>Product Name</p>
+        <p>$138.90</p>
+         <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Assets/bags/item2.jpg" />
+        <p>Product Name</p>
+        <p>$138.90</p>
+         <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Assets/shoes/item4.jpg" />
+        <p>Product Name</p>
+        <p>$138.90</p>
+         <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Assets/shoes/item5.jpg" />
+        <p>Product Name</p>
+        <p>$138.90</p>
+         <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Assets/Electronics/item7.jpg" />
+        <p>Product Name</p>
+        <p>$138.90</p>
+         <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Assets/shoes/item3.jpg" />
+        <p>Product Name</p>
+        <p>$138.90</p>
+         <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <aside class="notes-sidebar">
+    <div class="add-notes">
+      <h3>📝 Add Notes</h3>
+      <textarea placeholder="Write something..."></textarea>
+    </div>
+
+    <div class="wish-list">
+      <h3>Wishlist💖</h3>
+      <ul id="wishlistList" class="wishlist"></ul>
+    </div>
+  </aside>
+
+  </section>
+    
+  </div>
+  <!-- Footer -->   
+  <footer>
+    <p>&copy; 2025 Developed by Sandra Wandera &hearts;. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fas fa-tools icon"></i></a>
+      <a href="#"><i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
+
+<script src="JavaScript/homePage.js"></script>
+</body>
+</html>
