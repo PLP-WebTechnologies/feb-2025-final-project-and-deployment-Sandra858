@@ -61,7 +61,9 @@
       <video autoplay muted loop class="bg-video">
         <source src="Assets/Videos/banner-homepage.mp4" type="video/mp4" />
       </video>
-      <img src="Assets/Icons/profile-icon.jpg" alt="User" class="profile-icon" />
+      <a href="account.html">
+        <img src="Assets/Icons/profile-icon.jpg" alt="User" class="profile-icon" />
+      </a>
       <div class="overlay">
         <h1>Welcome Back!</h1>
         <p id="dynamicText">Shop with us! shop safe! Shop affordable!</p>
@@ -81,48 +83,64 @@
         <p>Product Name</p>
         <p>$138.90</p>
         <button class="add-to-cart-btn">Add to Cart</button>
+        <button class="add-to-wishlist" data-id="001" data-name="Product 1">♡</button>
+
       </div>
       <div class="product">
         <img src="Assets/Electronics/Item1.jpg" />
         <p>Product Name</p>
         <p>$138.90</p>
          <button class="add-to-cart-btn">Add to Cart</button>
+         <button class="add-to-wishlist" data-id="001" data-name="Product 1">♡</button>
+
       </div>
       <div class="product">
         <img src="Assets/Electronics/Item2.jpg" />
         <p>Product Name</p>
         <p>$138.90</p>
          <button class="add-to-cart-btn">Add to Cart</button>
+         <button class="add-to-wishlist" data-id="001" data-name="Product 1">♡</button>
+
       </div>
       <div class="product">
         <img src="Assets/bags/item2.jpg" />
         <p>Product Name</p>
         <p>$138.90</p>
          <button class="add-to-cart-btn">Add to Cart</button>
+         <button class="add-to-wishlist" data-id="001" data-name="Product 1">♡</button>
+
       </div>
       <div class="product">
         <img src="Assets/shoes/item4.jpg" />
         <p>Product Name</p>
         <p>$138.90</p>
          <button class="add-to-cart-btn">Add to Cart</button>
+         <button class="add-to-wishlist" data-id="001" data-name="Product 1">♡</button>
+
       </div>
       <div class="product">
         <img src="Assets/shoes/item5.jpg" />
         <p>Product Name</p>
         <p>$138.90</p>
          <button class="add-to-cart-btn">Add to Cart</button>
+         <button class="add-to-wishlist" data-id="001" data-name="Product 1">♡</button>
+
       </div>
       <div class="product">
         <img src="Assets/Electronics/item7.jpg" />
         <p>Product Name</p>
         <p>$138.90</p>
          <button class="add-to-cart-btn">Add to Cart</button>
+         <button class="add-to-wishlist" data-id="001" data-name="Product 1">♡</button>
+
       </div>
       <div class="product">
         <img src="Assets/shoes/item3.jpg" />
         <p>Product Name</p>
         <p>$138.90</p>
          <button class="add-to-cart-btn">Add to Cart</button>
+         <button class="add-to-wishlist" data-id="001" data-name="Product 1">♡</button>
+
       </div>
     </div>
   </div>
@@ -130,7 +148,8 @@
   <aside class="notes-sidebar">
     <div class="add-notes">
       <h3>📝 Add Notes</h3>
-      <textarea placeholder="Write something..."></textarea>
+      <textarea id="notes"  placeholder="Write something..."></textarea>
+      <button id="save-btn">Save Notes</button>
     </div>
 
     <div class="wish-list">

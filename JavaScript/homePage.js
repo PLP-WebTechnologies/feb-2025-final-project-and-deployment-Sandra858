@@ -71,3 +71,32 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initial render
   renderWishlist();
 
+
+
+// Notes Section Event======================
+document.addEventListener("DOMContentLoaded", function () {
+  const textarea = document.getElementById("notes");
+  const saveBtn = document.getElementById("save-btn");
+
+  const savedNote = localStorage.getItem("userNote");
+  if (savedNote) {
+    textarea.value = savedNote;
+  }
+
+  saveBtn.addEventListener("click", function () {
+    const note = textarea.value.trim();
+    if (note) {
+      localStorage.setItem("userNote", note);
+      alert("Yaay! something is saved.");
+    } else {
+      alert("Nothing is there to save!.");
+    }
+  });
+}); // ✅ This closes the DOMContentLoaded function
+
+
+
+
+
+
+

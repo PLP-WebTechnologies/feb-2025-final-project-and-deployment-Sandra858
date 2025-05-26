@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Account</title>
+  <link rel="stylesheet" href="CSS/account.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="account-container">
+    <aside class="sidebar">
+      <h2>Account</h2>
+      <ul>
+        <li><a href="homePage.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+        <li><a href="#"><i class="fas fa-lock"></i> Security</a></li>
+        <li><a href="#"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+        <section class="profile-header">
+            <h3>Profile Header</h3> <!-- This is now the toggle -->
+            <div class="content">
+                <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-pic">
+                <div class="user-details">
+                <h2>John Doe</h2>
+                <p>@johndoe</p>
+                </div>
+                <button class="edit-btn">Edit Profile</button>
+            </div>
+        </section>
+
+        <section class="profile-info">
+            <h3>Account Info</h3> <!-- This will act as the toggle button -->
+            <div class="content"> <!-- This is the collapsible content -->
+                <div class="info-grid">
+                <div><label>Full Name:</label><span>John Doe</span></div>
+                <div><label>Email:</label><span>john@example.com</span></div>
+                <div><label>Phone:</label><span>+254 712 345678</span></div>
+                <div><label>Location:</label><span>Nairobi, Kenya</span></div>
+                </div>
+            </div>
+        </section>
+        <section class="account-settings">
+            <h3>Account Settings</h3>
+            <div class="content">
+                <div class="toggle-group">
+                <label><input type="checkbox" checked> Email Notifications</label>
+                <label><input type="checkbox"> Dark Mode</label>
+                <label><input type="checkbox"> Two-Factor Authentication</label>
+                </div>
+            </div>
+        </section>
+
+        <section class="security-settings">
+        <h3>Security</h3>
+        <div class="content">
+            <button class="security-btn"><i class="fas fa-key"></i> Change Password</button>
+            <button class="security-btn danger"><i class="fas fa-trash"></i> Delete Account</button>
+        </div>
+        </section>
+
+     
+    </main>
+  </div>
+</body>
+<script src="JavaScript/account.js"></script>
+</html>
