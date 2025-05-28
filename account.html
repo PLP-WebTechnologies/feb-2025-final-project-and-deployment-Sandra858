@@ -13,29 +13,30 @@
       <h2>Account</h2>
       <ul>
         <li><a href="homePage.html"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
-        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
-        <li><a href="#"><i class="fas fa-lock"></i> Security</a></li>
-        <li><a href="#"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
+        <li><a href="#profile-section"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="#settings-section"><i class="fas fa-cog"></i> Settings</a></li>
+        <li><a href="#security-section"><i class="fas fa-lock"></i> Security</a></li>
+        <li><a href="signUp-In-Page.html"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
       </ul>
     </aside>
 
     <main class="main-content">
-        <section class="profile-header">
-            <h3>Profile Header</h3> <!-- This is now the toggle -->
-            <div class="content">
-                <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-pic">
+        <section id="profile-section" class="profile-header">
+            
+            <div class="content" >
+              <h3>Profile Header</h3>
+                  <div>
+                    <img src="Assets/Icons/profile-icon.jpg" alt="Profile Picture" class="profile-pic"> <br>
+                  </div>
+               
                 <div class="user-details">
                 <h2>John Doe</h2>
-                <p>@johndoe</p>
+                <p>Username: @johndoe</p>
                 </div>
                 <button class="edit-btn">Edit Profile</button>
             </div>
-        </section>
-
-        <section class="profile-info">
-            <h3>Account Info</h3> <!-- This will act as the toggle button -->
-            <div class="content"> <!-- This is the collapsible content -->
+            <div class="content">
+              <h3>Account Info</h3> 
                 <div class="info-grid">
                 <div><label>Full Name:</label><span>John Doe</span></div>
                 <div><label>Email:</label><span>john@example.com</span></div>
@@ -44,28 +45,56 @@
                 </div>
             </div>
         </section>
-        <section class="account-settings">
-            <h3>Account Settings</h3>
+
+    
+        <section id="settings-section" class="account-settings">
+          
             <div class="content">
-                <div class="toggle-group">
+              <h3>Account Settings</h3>
+              <div class="toggle-group">
+                <h4>Disable Email notifications</h4>
                 <label><input type="checkbox" checked> Email Notifications</label>
+                <h4>Enable Dark Mode</h4>
                 <label><input type="checkbox"> Dark Mode</label>
+                <h4>Enable Two-factor Authenitication</h4>
                 <label><input type="checkbox"> Two-Factor Authentication</label>
-                </div>
+                <h4>Location</h4>
+                <label><input type="checkbox">Allow Location Access</label>
+              </div>
             </div>
+            
         </section>
 
-        <section class="security-settings">
-        <h3>Security</h3>
-        <div class="content">
-            <button class="security-btn"><i class="fas fa-key"></i> Change Password</button>
+        <section id="security-section">
+            <div class="content">
+            <h3>Security</h3>
+            <h4>Change Email</h4>
+            <input type="email" name="" id="" placeholder="Enter current Email"> <br>
+            <input type="email" placeholder="Enter new Email" required> <br>
+            <button class="security-btn">Change Email</button>
+            <h4>Change Phone Number</h4>
+            <input type="tel" name="" id="" placeholder="New Phone number" required> <br>
+            <button class="security-btn">Change Phone Number</button>
+            <h4 >Change Password</h4>
+            <input type="password" name="" id="" placeholder="Enter old password"> <br>
+            <input type="password" name="" id="" placeholder="Enter new password"> <br>
+            <button class="security-btn"></i> Change Password</button>
+            <h4>Delete Account</h4>
             <button class="security-btn danger"><i class="fas fa-trash"></i> Delete Account</button>
-        </div>
+          </div>
         </section>
-
-     
     </main>
   </div>
+
+  <footer>
+    
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i>Contact live support</a>
+      <a href="#"><i class="fas fa-envelope"></i>Email Support</a> 
+      <p>Shop with us! Shop safe! Shop affordable!</p>
+    </div>
+    <p>&copy; 2025 Developed by Sandra Wandera &hearts;. All rights reserved.</p>
+  </footer>
 </body>
 <script src="JavaScript/account.js"></script>
 </html>

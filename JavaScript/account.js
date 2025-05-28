@@ -21,19 +21,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ======================== =====================
 
-const toggles = document.querySelectorAll('main .main-content section > h3');
+document.addEventListener("DOMContentLoaded", function () {
+  const sidebarLinks = document.querySelectorAll(".sidebar ul li a");
+  const sections = document.querySelectorAll(".main-content section");
 
-toggles.forEach(heading => {
-  heading.style.cursor = 'pointer';
+  sidebarLinks.forEach(link => {
+    link.addEventListener("click", function (e) {
+      // Only handle anchor links with hashes
+      if (this.hash.startsWith("#")) {
+        e.preventDefault();
 
-  heading.addEventListener('click', () => {
-    toggles.forEach(h => {
-      if (h !== heading) {
-        h.nextElementSibling.classList.remove('active'); // close others
+        const targetId = this.hash.slice(1); // remove the '#'
+        
+        // Hide all sections
+        sections.forEach(section => {
+          section.style.display = "none";
+        });
+
+        // Show the target section
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.style.display = "block";
+        }
       }
     });
-
-    const content = heading.nextElementSibling;
-    content.classList.toggle('active'); // toggle clicked section
   });
+
+  // Optionally, show the first section by default
+  sections.forEach(section => section.style.display = "none");
+  if (sections[0]) sections[0].style.display = "block";
 });
+

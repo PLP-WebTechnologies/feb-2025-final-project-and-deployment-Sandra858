@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Store with Sidebar and Checkout</title>
+  <link rel="stylesheet" href="CSS/cart.css" />
+</head>
+<body>
+
+  <div class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">Orders</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <header>
+    <div class="cart-info">
+      <div>
+        <small>Items in Cart</small>
+        <strong id="cartCount">0</strong>
+      </div>
+      <div>
+        <small>Discount</small>
+        <strong id="cartDiscount">$0</strong>
+      </div>
+      <div>
+        <small>Total Price</small>
+        <strong id="cartTotal">$0</strong>
+      </div>
+    </div>
+    <button id="checkoutBtn" disabled>Checkout</button>
+  </header>
+
+  <main id="productList"></main>
+
+  <div id="checkoutFormContainer">
+    <form id="checkoutForm">
+      <h2>Checkout</h2>
+      <label for="address">Delivery Address</label>
+      <input
+        type="text"
+        id="address"
+        name="address"
+        required
+        placeholder="Enter your delivery address"
+      />
+
+      <label for="paymentCard">Choose a payment card</label>
+      <select id="paymentCard" name="paymentCard" required>
+        <option value="" disabled selected>Select a card</option>
+        <option value="Chase Bank - 5432">Chase Bank - 5432</option>
+        <option value="Equity Bank - 2211">Equity Bank - 2211</option>
+        <option value="PayPal - sample@email.com">PayPal - sample@email.com</option>
+      </select>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Your Store. All rights reserved.
+  </footer>
+
+  <script src="JavaScript/cart.js"></script>
+</body>
+</html>

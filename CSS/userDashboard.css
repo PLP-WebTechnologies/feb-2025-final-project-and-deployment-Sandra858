@@ -1,0 +1,234 @@
+
+/* ================================ Body s tyles===================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================Footer========================= */
+/* Footer base */
+footer {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-top: 1px solid #e0e0e0; /* Light mode border */
+  background-color: #f5f7fa;     /* Light mode background */
+  color: #333;                   /* Light mode text */
+}
+
+/* Footer heading */
+footer h2 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+/* Footer paragraphs */
+footer p {
+  margin: 0.25rem 0;
+}
+
+/* Support links list */
+footer .support-links {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Support links list items */
+footer .support-links li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Support links anchors */
+footer .support-links a {
+  color: #1e88e5; /* Link blue */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer .support-links a:hover {
+  text-decoration: underline;
+}
+
+/* Footer copyright */
+footer p:last-child {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* ========================= Dark Mode Overrides ======================= */
+body.dark-mode footer {
+  background-color: #222222;
+  color: wheat;
+  border-top: 1px solid #444;
+}
+
+body.dark-mode footer .support-links a {
+  color: #a5b4fc;  /* lighter accent in dark mode */
+}
+
+body.dark-mode footer p:last-child {
+  color: #aaa;
+}
+
+body.dark-mode footer .support-links a:hover {
+  color: #d1d5db;
+}
+
+
+/* ====================Side bar nafigation================================= */
+/* Sidebar base styles - Light mode */
+.sidebar {
+  background-color: #ffffff;
+  width: 140px;
+  height: auto;
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  margin: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  overflow: hidden;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Sidebar expand on hover */
+.sidebar:hover {
+  width: 250px;
+}
+
+/* Sidebar navigation list */
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Sidebar nav list items */
+.sidebar nav ul li {
+  margin-bottom: 20px;
+}
+
+/* Sidebar nav links - Light mode */
+.sidebar nav ul li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 0.8rem;
+  transition: 
+    color 0.3s ease, 
+    padding 0.3s ease, 
+    background-color 0.3s ease;
+}
+
+/* Sidebar nav links hover - Light mode */
+.sidebar nav ul li a:hover {
+  background-color: #e6f0ff;
+  padding: 10px 50px;
+  border-radius: 5px;
+  color: #1e88e5;
+}
+
+/* Toggle container (for mode toggle button) */
+.toggle-container {
+  margin-top: 0;
+  text-align: start;
+}
+
+/* Mode toggle button */
+#modeToggle {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  color: #333;
+}
+
+/* Mode toggle hover */
+#modeToggle:hover {
+  transform: translateY(5px);
+  color: #1e88e5;
+}
+
+/* ==================== Dark Mode Sidebar Styles ====================== */
+body.dark-mode .sidebar {
+  background-color: #333333;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .sidebar nav ul li a {
+  color: wheat;
+}
+
+body.dark-mode .sidebar nav ul li a:hover {
+  background-color: #a76767;
+  color: #ffffff;
+}
+
+body.dark-mode #modeToggle {
+  color: wheat;
+}
+
+body.dark-mode #modeToggle:hover {
+  color: #f5a9a9;
+}
+
